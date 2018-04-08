@@ -52,7 +52,7 @@ welcome_messages
 
 
 
-If each time we wanted to reuse code we needed to copy and paste the code, we would be having to maintain a lot more code than is necessary.  Also, each time we recopied it is another opportunity to make a mistake.  So what if there was a way to write that code just one time, yet be able to execute that code wherever and whenever we want?  Functions allow us to do just that.
+If each time we wanted to reuse code we needed to copy and paste the code, we would be having to maintain a lot more code than is necessary.  Also, each time we recopy our code presents another opportunity to make a mistake. So what if there was a way to write that code just one time, yet be able to execute that code wherever and whenever we want? That's where functions come in.
 
 Here is that same code wrapped in a function.
 
@@ -81,12 +81,14 @@ new_employees = ['Jan', 'Joe', 'Avi']
 greet_employees()
 ```
 
-Ok let's break down how to define, or declare, a function.  Executing a function is fairly simple, just type the function's name followed by parentheses.
+Ok executing a function is fairly simple, just type the function's name followed by parentheses:
 
 
 ```python
 greet_employees()
 ```
+
+Let's break down how to define or declare a function.
 
 ### Declaring and using functions
 
@@ -108,7 +110,7 @@ The `def` is there to tell Python that you are about to declare a function.  The
 
 #### Function Body
 
-The body of the function is what the function does.  This is the code that runs each time we execute the function.  We indicate that we are writing the function body by going to the next line and indenting after the colon.  To complete the function body we stop indenting.  
+The body of the function is what the function does.  This is the code that runs each time we execute the function.  We indicate that we are writing the function body by going to the next line after the colon and then indenting.  To complete the function body we stop indenting and make a new line.  
 
 
 ```python

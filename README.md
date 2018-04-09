@@ -1,91 +1,82 @@
 
 # Functions in Python
 
-As we learn to accomplish more and more with our code, we want the ability to reuse our code to help us solve different problems.  Functions allow to do just that.  They also also give us the ability to name a sequence of operations, thus making our code expressive.  Let's see how this works, and why something like this is useful.
+As we learn to accomplish more and more with our code, we want the ability to reuse our code to help us solve different problems.  Functions allow to do just that.  They also also give us the ability to name a sequence of operations, thus making our code expressive.  Let's see how this works and why something like this is useful.
 
 ### Our problem so far 
 
-Imagine that we have a group of employees who have just joined our company.  
+Imagine that we have chosen to visit one of our top travel destinations, Argentina. We just arrived at our hotel to meet our tour group, and a few of our fellow tourists are already there.
 
 
 ```python
-new_employees = ['jim', 'tracy', 'lisa']
+fellow_tourists = ['jim', 'tracy', 'lisa']
 ```
 
 > Press shift + enter to run this code.
 
-We want to send each of them a nice welcoming message.  We could use a `for` loop to create a list of `welcome_messages`.
+We want to say hello to each of them with a friendly greeting. We could use a `for` loop to create a list of `friendly_greetings`.
 
 
 ```python
-welcome_messages = []
-for new_employee in new_employees:
-    welcome_messages.append("Hi " + new_employee.title() + ", I'm so glad to be working with you!" )
+friendly_greetings = []
+for fellow_tourist in fellow_tourists:
+    friendly_greetings.append("Hi " + fellow_tourist + ", I'm so glad to be travelling with you!" )
 
-welcome_messages
+friendly_greetings
 ```
 
-Then a couple of weeks later, a few more employees join, and we want to send messages to them as well.
+Then a couple of hours later, a few more tourists arrive to join the group, and we want to greet them as well.
 
 
 ```python
-new_employees = ['steven', 'jan', 'meryl']
+fellow_tourists = ['steven', 'jan', 'meryl']
 ```
 
 Well to accomplish, we would likely copy our code from above.
 
 
 ```python
-welcome_messages = []
-for new_employee in new_employees:
-    welcome_messages.append("Hi " + new_employee.title() + ", I'm so glad to be working with you!" )
+friendly_greetings = []
+for fellow_tourist in fellow_tourists:
+    friendly_greetings.append("Hi " + fellow_tourist + ", I'm so glad to be travelling with you!" )
     
-welcome_messages
+friendly_greetings
 ```
 
+If each time we wanted to reuse code we needed to copy and paste the code, we would be having to maintain a lot more code than is necessary.  Also, each time we recopy our code presents another opportunity to make a mistake. What if there were a way to write that code just one time, yet be able to execute that code wherever and whenever we want? That's where functions come in.
 
-
-
-    ["Hi Steven, I'm so glad to be working with you!",
-     "Hi Jan, I'm so glad to be working with you!",
-     "Hi Meryl, I'm so glad to be working with you!"]
-
-
-
-If each time we wanted to reuse code we needed to copy and paste the code, we would be having to maintain a lot more code than is necessary.  Also, each time we recopy our code presents another opportunity to make a mistake. So what if there was a way to write that code just one time, yet be able to execute that code wherever and whenever we want? That's where functions come in.
-
-Here is that same code wrapped in a function.
+Here is that same code wrapped in a function:
 
 
 ```python
-def greet_employees():
-    welcome_messages = []
-    for new_employee in new_employees:
-        welcome_messages.append("Hi " + new_employee.title() + ", I'm so glad to be working with you!" )
+def greet_fellow_tourists():
+    friendly_greetings = []
+    for fellow_tourist in fellow_tourists:
+        friendly_greetings.append("Hi " + fellow_tourist + ", I'm so glad to be travelling with you!" )
 
-    return welcome_messages
+    return friendly_greetings
 ```
 
 
 ```python
-greet_employees()
+greet_fellow_tourists()
 ```
 
 > Make sure to press shift + enter for the two cells above.
 
-There are two steps to using a function: defining a function and executing a function.  Defining a function happens first, and afterwards when we call `greet_employees()` we execute the function.   
+There are two steps to using a function: defining a function and executing a function.  Defining a function happens first, and afterwards when we call `greet_fellow_tourists()` we execute the function.   
 
 
 ```python
-new_employees = ['Jan', 'Joe', 'Avi']
-greet_employees()
+fellow_tourists = ['Jan', 'Joe', 'Avi']
+greet_fellow_tourists()
 ```
 
 Ok executing a function is fairly simple, just type the function's name followed by parentheses:
 
 
 ```python
-greet_employees()
+greet_fellow_tourists()
 ```
 
 Let's break down how to define or declare a function.
@@ -174,25 +165,25 @@ Much better.  So with the return statement we returned the string `'returned fro
 
 ### See it again
 
-Now let's identify the function signature and function body of our original function, `greet_empoyees()`.
+Now let's identify the function signature and function body of our original function, `greet_fellow_tourists()`.
 
 
 ```python
-def greet_employees(): # function signature
-    welcome_messages = [] # begin function body
-    for new_employee in new_employees:
-        welcome_messages.append("Hi " + new_employee.title() + ", I'm so glad to be working with you!" )
+def greet_fellow_tourists(): # function signature
+    friendly_greetings = [] # begin function body
+    for fellow_tourist in fellow_tourists:
+        friendly_greetings.append("Hi " + fellow_tourist + ", I'm so glad to be travelling with you!" )
 
-    return welcome_messages # return statement
+    return friendly_greetings # return statement
 
 # no longer in function body
 ```
 
-As you can see, `greet_employees` has the same components of a function we identified earlier: the function signature, the function body, and the return statement. Each time we call, `greet_employees()`, all of the lines in the body of the function are run.  However, only the return statement is accessible from outside of the function.
+As you can see, `greet_fellow_tourists()` has the same components of a function we identified earlier: the function signature, the function body, and the return statement. Each time we call, `greet_fellow_tourists()`, all of the lines in the body of the function are run.  However, only the return statement is accessible from outside of the function.
 
 
 ```python
-greet_employees()
+greet_fellow_tourists()
 ```
 
 ### Summary

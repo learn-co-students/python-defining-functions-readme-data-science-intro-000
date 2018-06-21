@@ -1,7 +1,7 @@
 
 # Functions in Python
 
-As we learn to accomplish more and more with our code, we want the ability to reuse our code to help us solve different problems.  Functions allow to do just that.  They also also give us the ability to name a sequence of operations, thus making our code expressive.  Let's see how this works, and why something like this is useful.
+As we learn to accomplish more and more with our code, we want the ability to reuse our code to help us solve different problems.  Functions allow us to do just that.  They also also give us the ability to name a sequence of operations, thus making our code expressive.  Let's see how this works, and why something like this is useful.
 
 ### Our problem so far 
 

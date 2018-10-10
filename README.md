@@ -32,7 +32,7 @@ Then a couple of weeks later, a few more employees join, and we want to send mes
 new_employees = ['steven', 'jan', 'meryl']
 ```
 
-Well to accomplish, we would likely copy our code from above.
+Well to accomplish this, we would likely copy our code from above.
 
 
 ```python
